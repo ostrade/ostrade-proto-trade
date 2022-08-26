@@ -10,6 +10,10 @@ import "google/protobuf/timestamp.proto";
 import "ostrade/common/type.proto";
 import "ostrade/common/field.proto";
 
+/*
+Comment
+ */
+
 message Trade {
   int64 trade_id = 1;
   ostrade.field.Side side = 2;
