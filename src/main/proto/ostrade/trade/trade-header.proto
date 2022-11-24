@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_package = "org.ostrade.proto.trade";
+option java_outer_classname = "TradeHeaderProtos";
+option java_multiple_files = true;
+
+package ostrade.trade;
+
+import "ostrade/common/type.proto";
+
+message TradeId {
+  string source = 1;
+  string value = 2;
+}
+
+message TradeHeader {
+  repeated TradeId tradeIds = 1;
+  ostrade.type.Date tradeDate = 2;
+  ostrade.type.Date startDate = 3;
+  ostrade.type.Date endDate = 4;
+}

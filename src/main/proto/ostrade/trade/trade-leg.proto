@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option java_package = "org.ostrade.proto.trade";
+option java_outer_classname = "TradeLegProtos";
+option java_multiple_files = true;
+
+package ostrade.trade;
+
+import "ostrade/common/type.proto";
+import "ostrade/legalentity/legal-entity.proto";
+
+message TradeLegId {
+  string source = 1;
+  string value = 2;
+}
+
+message TradeLeg {
+  repeated TradeLegId tradeLegIds = 1;
+  oneof oneOfLegType {
+    FixedLeg fixedLeg = 2;
+    FloatLeg floatLeg = 3;
+  }
+}
+
+message FixedLeg {
+  ostrade.legalentity.LegalEntity payer = 1;
+  ostrade.legalentity.LegalEntity receiver = 2;
+  double price = 3;
+  string priceCurrency = 4;
+  string priceUom = 5;
+  double quantity = 6;
+}
+
+message FloatLeg {
+
+}

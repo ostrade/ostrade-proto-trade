@@ -17,6 +17,11 @@
             <artifactId>ostrade-proto-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>org.ostrade.proto</groupId>
+            <artifactId>ostrade-proto-legal-entity</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>
